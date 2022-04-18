@@ -1,0 +1,54 @@
+{
+    "Info": [
+        {
+            "gamObj": {
+                "instanceID": 17394
+            },
+            "ItemName": "GhostOrb",
+            "ItemType": "Coin",
+            "ItemLevel": "99",
+            "ItemDamage": 0.0,
+            "ItemWeight": 1.2000000476837159
+        },
+        {
+            "gamObj": {
+                "instanceID": 0
+            },
+            "ItemName": "",
+            "ItemType": "",
+            "ItemLevel": "",
+            "ItemDamage": 0.0,
+            "ItemWeight": 0.0
+        },
+        {
+            "gamObj": {
+                "instanceID": 0
+            },
+            "ItemName": "",
+            "ItemType": "",
+            "ItemLevel": "",
+            "ItemDamage": 0.0,
+            "ItemWeight": 0.0
+        },
+        {
+            "gamObj": {
+                "instanceID": 0
+            },
+            "ItemName": "",
+            "ItemType": "",
+            "ItemLevel": "",
+            "ItemDamage": 0.0,
+            "ItemWeight": 0.0
+        },
+        {
+            "gamObj": {
+                "instanceID": 0
+            },
+            "ItemName": "",
+            "ItemType": "",
+            "ItemLevel": "",
+            "ItemDamage": 0.0,
+            "ItemWeight": 0.0
+        }
+    ]
+}
