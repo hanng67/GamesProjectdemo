@@ -10,6 +10,9 @@ public class EssentialLoader : MonoBehaviour
     [SerializeField]
     private GameObject _UICanvasFade;
 
+    [SerializeField]
+    private GameObject _gameMan;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,11 @@ public class EssentialLoader : MonoBehaviour
         if (UIFade.instance == null)
         {
             UIFade.instance = Instantiate(_UICanvasFade).GetComponent<UIFade>();
-            //Instantiate(_UICanvasFade);
+        }
+
+        if(GameManager.instance == null)
+        {
+            Instantiate(_gameMan);
         }
 
     }

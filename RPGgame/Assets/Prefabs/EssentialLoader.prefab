@@ -46,3 +46,5 @@ MonoBehaviour:
   _player: {fileID: 2350292340958571484, guid: 9de584b131e6b8846bc5c3c890b02175, type: 3}
   _UICanvasFade: {fileID: 264440199536709248, guid: 8b109b257c4b9db49830200ba643ad94,
     type: 3}
+  _gameMan: {fileID: 3527324745980262108, guid: a4675bab01843d442836f27bb9c913b8,
+    type: 3}

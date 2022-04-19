@@ -44,6 +44,7 @@ public class AreaExit : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _shouldLoadAfterFade = true;
+            GameManager.instance.fadingBetweenAreas = true;
             UIFade.instance.FadeToBlack();
 
             PlayerController.instance.areaTransistionName = _areaTransitionName;
