@@ -29,7 +29,7 @@ public class EssentialLoader : MonoBehaviour
 
         if(GameManager.instance == null)
         {
-            Instantiate(_gameMan);
+            GameManager.instance =  Instantiate(_gameMan).GetComponent<GameManager>();
         }
 
     }
