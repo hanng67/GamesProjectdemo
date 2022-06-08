@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     public bool gameMenuOpen, dialogActive, fadingBetweenAreas;
 
+    public string[] itemsHeld;
+    public int[] numberOfItems;
+    public Item[] referenceItems;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +33,67 @@ public class GameManager : MonoBehaviour
         {
             PlayerController.instance.canMove = true;
         }
+    }
+
+    public Item GetItemDetails(string itemToGrab)
+    {
+        for (int i = 0; i < referenceItems.Length; i++)
+        {
+            if(referenceItems[i].itemName == itemToGrab)
+            {
+                return referenceItems[i];
+            }
+        }
+
+        return null;
+    }
+
+    public void SortItems()
+    {
+        // Follow tutorial
+        //bool itemAfterSpace = true;
+
+        //while (itemAfterSpace)
+        //{
+        //    itemAfterSpace = false;
+        //    for (int i = 0; i < itemsHeld.Length-1; i++)
+        //    {
+        //        if(itemsHeld[i] == "")
+        //        {
+        //            itemsHeld[i] = itemsHeld[i + 1];
+        //            itemsHeld[i + 1] = "";
+
+        //            numberOfItems[i] = numberOfItems[i + 1];
+        //            numberOfItems[i + 1] = 0;
+
+        //            if(itemsHeld[i] != "")
+        //            {
+        //                itemAfterSpace = true;
+        //            }
+        //        }
+        //    }
+        //}
+
+        for (int i = 0; i < itemsHeld.Length-1; i++)
+        {
+            if (itemsHeld[i] != "") continue;
+
+            for (int j = i+1; j < itemsHeld.Length; j++)
+            {
+                if (itemsHeld[j] == "") continue;
+
+                SwapItems(i, j);
+                break;
+            }
+        }
+    }
+
+    private void SwapItems(int firstIdx, int secondIdx)
+    {
+        itemsHeld[firstIdx] = itemsHeld[secondIdx];
+        itemsHeld[secondIdx] = "";
+
+        numberOfItems[firstIdx] = numberOfItems[secondIdx];
+        numberOfItems[secondIdx] = 0;
     }
 }
